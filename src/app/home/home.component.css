@@ -4,18 +4,29 @@ ul, a {
   text-decoration: none;
   list-style: none;
 }
+
 .web-home {
   background: url("../../assets/images/background.jpg") no-repeat;
   background-size: auto 100vh;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
+
 header {
   font-family: "Montserrat", sans-serif;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
 
+.header-left {
+  width: fit-content;  
 }
+
 .header-left .header-left-top {
-  padding: 25px 0;
+  padding: 25px 0px;
 }
+
 .header-left .header-left-top a i{
   color: aliceblue;
   font-size: 12px;
@@ -28,43 +39,51 @@ header {
   text-transform: uppercase;
   font-weight: 500;
   list-style: none;
-}
-.menu-left > li {
-  float: left;
   display: block;
+}
 
+.menu-left > li {
+  display: inline-block;
 }
+
 .menu-left > li:hover {
-  /*text-shadow: 0 0 0 0.3;*/
+  text-shadow: 0 0 10px white;
 }
-.menu-left > li:first-child a{
+
+.menu-left > li:first-child a {
   padding-left: 0;
 }
 
-.menu-left > li:last-child a{
+.menu-left > li:last-child a {
   padding-right: 0;
 }
+
 .menu-left  li  a {
   color: aliceblue;
   display: block;
   padding: 15px;
 }
+
 .dropdown {
   position: relative;
-
 }
+
 .dropdown-content {
   background: rgba(255, 255, 255, 0.75);
   display: none;
   width: max-content;
   position: absolute;
-  bottom: 0px;
+  top: 46px;
   box-shadow: 0.5px 0.5px 7px #ddd;
-  border-radius: 7px 7px 7px 7px;
+  border-radius: 5px 5px 7px 5px;
   /*transition-duration: 0.3s;*/
+}
+
+.sub-menu {
   position: relative;
 }
-.dropdown-content:after, .dropdown-content:before {
+
+.sub-menu:after, .sub-menu:before {
   bottom: 100%;
   left: 25px;
   border: solid transparent;
@@ -75,51 +94,147 @@ header {
   pointer-events: none;
 }
 
-.dropdown-content:after {
+.sub-menu:after {
   border-bottom-color: rgba(255, 255, 255, 0.75);
   border-width: 8px;
   margin-left: -8px;
 }
-.dropdown-content:before {
+
+.sub-menu:before {
   /*border-bottom-color: rgba(255, 255, 255, 0.75);*/
   border-width: 14px;
   margin-left: -14px;
 }
-.dropdown-content ul li {
 
+.dropdown-content ul li {
   border-bottom: 1px solid rgba(204, 204, 204, 0.85);
 }
 
 .dropdown-content ul li:last-child {
   border: none;
 }
+
 .dropdown-content ul li a {
   color: #515561;
   font-weight: bold;
   font-size: 12px;
   display: block;
-  padding: 10px 15px;
+  padding: 10px 20px 10px 15px;
   transition-duration: 0.3s;
 }
-.dropdown-content ul li:hover a{
+
+.dropdown-content ul li:hover a {
   padding-left: 22px;
-  padding-right: 8px;
+  padding-right: 13px;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
   animation: fade_in_show 0.3s;
 }
+
 @keyframes fade_in_show {
   0% {
     opacity: 0;
     transform: scaleY(0)
   }
-
+  
   100% {
     opacity: 1;
     transform: scaleY(1)
   }
 }
 
+.logo {
+  width: 153px;
+  height: 113px;
+}
 
+.logo img {
+  height: 113px;
+}
+
+.header-right {
+  width: fit-content;
+}
+
+.header-right .header-right-top {
+  padding: 25px 0px;
+}
+
+.header-right .header-right-top a {
+  color: aliceblue;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-right: 15px ;
+}
+
+.header-right .header-right-top i {
+  color: aliceblue;
+  font-size: 12px;
+  padding-right: 3px ;
+}
+
+.header-right .header-right-bottom .menu-right {
+  font-size: 11px;
+  color: aliceblue;
+  text-transform: uppercase;
+  font-weight: 500;
+  list-style: none;
+  display: block;
+}
+
+.menu-right > li {
+  display: inline-block;
+}
+
+.menu-right > li:hover {
+  text-shadow: 0 0 10px white;
+}
+
+.menu-right > li:first-child a {
+  padding-left: 0;
+}
+
+.menu-right > li:last-child a{
+  padding-right: 0;
+}
+
+.menu-right  li  a {
+  color: aliceblue;
+  display: block;
+  padding: 15px;
+}
+
+.header-right select {
+  -webkit-appearance: none;
+  background: none;
+  color: aliceblue;
+  font-size: 12px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  padding: 3px;
+}
+
+.header-right select:focus {
+  border: none;
+  outline: none;
+}
+
+.header-right select option {
+  color: #515151;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.banner {
+  height: 650px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow a {
+  color: rgb(218, 232, 245);
+
+}
